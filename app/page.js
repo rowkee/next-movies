@@ -1,11 +1,17 @@
 "use client";
 
 function Home() {
+  async function handleSignIn() {
+    console.log("sign in");
+    const res = await fetch("http://localhost:3000/api/auth/signIn");
+  }
   return (
     <>
-      <div>Hello Aeronaughts</div>
-      <h1> Rick Was Here </h1>
-      <p>Jake woz here</p>
+      <div className="flex justify-center align-middle ">
+        <button onClick={handleSignIn} className="border border-gray-900">
+          Sign in
+        </button>
+      </div>
     </>
   );
 }
