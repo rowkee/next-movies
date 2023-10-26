@@ -15,11 +15,11 @@ function Login() {
         
 
     return (
-        <div >
+        <form onSubmit={handleSubmit}>
             <label >Username</label>
             <input type="text" value={ user } onChange={ (e) => setUser(e.target.value) } />
-            <button type="submit" onClick={handleSubmit}>Sign In</button>
-        </div>
+            <button type="submit">Sign In</button>
+        </form>
       )
     }
 
